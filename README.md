@@ -1,16 +1,43 @@
-### Hi there 👋
+# Hi there, I'm iambhvsh 👋
 
-<!--
-**iambhvsh/iambhvsh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a passionate Frontend Web Developer who loves creating interactive and user-friendly web experiences using HTML, CSS, and JavaScript.
 
-Here are some ideas to get you started:
+🔭 I’m currently working on <strong>iambhvsh</strong>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🌱 Inspired by Apple
+
+💗 Indian
+
+## 🚀 Skills and Tools
+
+- HTML
+- CSS
+- JavaScript
+- Tailwind CSS
+- Bootstrap
+- Git & GitHub
+- Visual Studio Code
+
+## 💼 Portfolio
+
+Check out some of my projects:
+
+- <a href="https://storee.vercel.app"><strong>Pro Store</strong>
+
+- <a href="https://sanjaypatil.vercel.app"><strong>Dad's Website</strong>
+
+## 📫 Contact Me
+
+- Email: iambhvshh@outlook.com
+
+## 🌐 Find me online
+
+- [GitHub](https://github.com/iambhvsh)
+
+## 📊 GitHub Stats
+
+![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=iambhvsh&show_icons=true&theme=dark)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iambhvsh&layout=compact&theme=dark)
+
+Feel free to connect and collaborate with me. Let's create amazing web experiences together! 👨‍💻
