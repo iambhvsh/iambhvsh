@@ -1,7 +1,4 @@
 {
   "index": "Introduction",
-  "thepixelstore": {
-    "title": "thepixelstore",
-    "type": "page"
-  }
+  "thepixelstore": "thepixelstore"
 }
