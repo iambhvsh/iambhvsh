@@ -1,11 +1,7 @@
 {
-  "index": "My Homepage",
-  "contact": "Contact Us",
-  "fruits": "Delicious Fruits",
-  "about": "About Us",
-  "github_link": {
-    "title": "Nextra",
-    "href": "https://github.com/shuding/nextra",
-    "newWindow": true
+  "index": "Introduction",
+  "thepixelstore": {
+    "title": "thepixelstore",
+    "type": "page"
   }
 }
