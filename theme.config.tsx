@@ -1,8 +1,8 @@
+import React from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 import { useConfig } from 'nextra-theme-docs';
 import Image from 'next/image';
-import styles from './styles';
 
 const useNextSeoProps = () => {
   return {
@@ -60,7 +60,6 @@ const config: DocsThemeConfig = {
       </>
     );
   },
-  styles: styles,
 };
 
 export default config;
