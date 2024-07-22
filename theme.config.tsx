@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'eact';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 import { useConfig } from 'nextra-theme-docs';
@@ -6,17 +6,17 @@ import Image from 'next/image';
 
 const useNextSeoProps = () => {
   return {
-    titleTemplate: '%s',
+    titleTemplate: '%s'
   };
 };
 
 const config: DocsThemeConfig = {
   logo: (
-    <Image
-      src="/logo.png"
-      height={30}
-      width={30}
-      style={{ borderRadius: '50%' }}
+    <Image 
+      src="/logo.png" 
+      height={30} 
+      width={30} 
+      style={{ borderRadius: '50%' }} 
       alt="Logo"
     />
   ),
@@ -25,7 +25,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/iambhvsh',
   footer: {
-    text: ' Bhavesh Patil',
+    text: '🤩 Bhavesh Patil',
   },
   useNextSeoProps,
   head: () => {
@@ -33,7 +33,7 @@ const config: DocsThemeConfig = {
     const { frontMatter } = useConfig();
     const url =
       'https://iambhvsh.vercel.app' +
-      (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
+      (defaultLocale === locale? asPath : `/${locale}${asPath}`);
 
     return (
       <>
@@ -48,10 +48,7 @@ const config: DocsThemeConfig = {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#2d89ef" />
-
-        {/* Added color configuration for pure black background in dark mode */}
-        <meta name="theme-color" content="var(--nextra-dark-background)" />
-
+        <meta name="theme-color" content="#000000" />
         <meta name="description" content={frontMatter.description || 'Personal website and more by Bhavesh Patil'} />
         <meta name="author" content="Bhavesh Patil" />
         <meta property="og:image" content="https://ogp.dsabyte.com/api/image.png?layoutName=Simple&Text=Bhavesh+Patil&left=tomato&right=deeppink&ext=.png" />
@@ -63,12 +60,9 @@ const config: DocsThemeConfig = {
       </>
     );
   },
-  
-  colors: {
-    
-    dark: {
-      background: 'var(--nextra-dark-background)',
-    },
+  primaryHue: {
+    light: 255, // White
+    dark: 0, // Pure Black
   },
 };
 
