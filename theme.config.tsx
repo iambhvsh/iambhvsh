@@ -2,6 +2,7 @@ import React from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 import { useConfig } from 'nextra-theme-docs';
+import Image from 'next/image';
 
 const useNextSeoProps = () => {
   return {
@@ -10,7 +11,15 @@ const useNextSeoProps = () => {
 };
 
 const config: DocsThemeConfig = {
-  logo: <img src="/favicon-32x32.png" height="30" width="30" style="border-radius: 100px;"></img>,
+  logo: (
+    <Image 
+      src="/favicon-32x32.png" 
+      height={30} 
+      width={30} 
+      style={{ borderRadius: '50%' }} 
+      alt="Logo"
+    />
+  ),
   project: {
     link: 'https://github.com/iambhvsh',
   },
