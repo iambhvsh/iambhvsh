@@ -13,7 +13,7 @@ const useNextSeoProps = () => {
 const config: DocsThemeConfig = {
   logo: (
     <Image 
-      src="/favicon-16x16.png" 
+      src="/logo.png" 
       height={30} 
       width={30} 
       style={{ borderRadius: '50%' }} 
