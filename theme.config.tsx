@@ -2,7 +2,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 import { useConfig } from 'nextra-theme-docs';
 import Image from 'next/image';
-import { styles } from './styles';
+import styles from './styles';
 
 const useNextSeoProps = () => {
   return {
