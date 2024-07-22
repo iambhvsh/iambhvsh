@@ -42,11 +42,11 @@ const config: DocsThemeConfig = {
         <meta name="theme-color" content="#000000" />
         <meta name="description" content={frontMatter.description || 'Personal website and more by Bhavesh Patil'} />
         <meta name="author" content="Bhavesh Patil" />
-        <meta property="og:image" content="https://iambhvsh.vercel.app/og-image.png" />
+        <meta property="og:image" content="https://ogp.dsabyte.com/api/image.png?layoutName=Simple&Text=Bhavesh+Patil&left=tomato&right=deeppink&ext=.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={frontMatter.title || 'iambhvsh'} />
         <meta name="twitter:description" content={frontMatter.description || 'Personal website and more by Bhavesh Patil'} />
-        <meta name="twitter:image" content="https://iambhvsh.vercel.app/og-image.png" />
+        <meta name="twitter:image" content="https://ogp.dsabyte.com/api/image.png?layoutName=Simple&Text=Bhavesh+Patil&left=tomato&right=deeppink&ext=.png" />
       </>
     );
   },
