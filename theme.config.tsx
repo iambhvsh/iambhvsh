@@ -56,6 +56,7 @@ const config: DocsThemeConfig = {
         <meta name="twitter:title" content={frontMatter.title || 'iambhvsh'} />
         <meta name="twitter:description" content={frontMatter.description || 'Personal website and more by Bhavesh Patil'} />
         <meta name="twitter:image" content="https://ogp.dsabyte.com/api/image.png?layoutName=Simple&Text=Bhavesh+Patil&left=tomato&right=deeppink&ext=.png" />
+        <meta name="google-site-verification" content="UkG6otmqZFb_kB50fQvIFqrqZGYNm00YpfKG9B_aGTY" />
       </>
     );
   },
