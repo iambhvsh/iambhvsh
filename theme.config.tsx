@@ -33,7 +33,7 @@ const config: DocsThemeConfig = {
     const { frontMatter } = useConfig();
     const url =
       'https://iambhvsh.vercel.app' +
-      (defaultLocale === locale? asPath : `/${locale}${asPath}`);
+      (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
     return (
       <>
@@ -60,9 +60,15 @@ const config: DocsThemeConfig = {
       </>
     );
   },
-  primaryHue: {
-    light: 255, // White
-    dark: 0, // Pure Black
+  styles: {
+    body: {
+      '[data-theme="dark"] &': {
+        backgroundColor: '#000000',
+      },
+    },
+    link: {
+      color: '#007aff',
+    },
   },
 };
 
