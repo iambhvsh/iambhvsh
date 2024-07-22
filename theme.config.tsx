@@ -1,4 +1,4 @@
-import React from 'eact';
+import React from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 import { useConfig } from 'nextra-theme-docs';
