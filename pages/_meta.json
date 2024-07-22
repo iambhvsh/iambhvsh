@@ -1,4 +1,10 @@
 {
-  "index": "Introduction",
-  "projects": "Projects"
+  "index": "👤 Introduction",
+  "projects": "⚒️ Projects",
+  "github": {
+    "title": "📂 Github",
+    "type": "page",
+    "href": "https://github.com/iambhvsh",
+    "newWindow": true
+  }
 }
