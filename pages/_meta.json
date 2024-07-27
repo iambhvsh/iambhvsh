@@ -1,5 +1,9 @@
 {
   "index": "👤 Introduction",
+  "learn": {
+    "title": "📚 Learn with me",
+    "type": "page"
+  }
   "projects": "⚒️ Projects",
   "github": {
     "title": "📂 Github",
