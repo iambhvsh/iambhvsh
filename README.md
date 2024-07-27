@@ -2,7 +2,7 @@
 
 ## 🌟 About Me
 
-Hey there! I'm Bhavesh Patil, the web wizard from Chatrapati Sambhajinagar, currently battling the dragons of a BSC in IT at MGM's Dr. G. Y. Pathrikar. Based in India, I brew web applications like a caffeinated barista. As an introvert, I thrive in my code cave, enjoying the silent symphonies of coding, music, and horror stories. 
+Hey there! I'm Bhavesh Patil, the web wizard from Chhatrapati Sambhajinagar, currently battling the dragons of a BSC in IT at MGM's Dr. G. Y. Pathrikar. Based in India, I brew web applications like a caffeinated barista. As an introvert, I thrive in my code cave, enjoying the silent symphonies of coding, music, and horror stories. 
 
 ## 💼 Skills & Technologies
 
