@@ -1,4 +1,7 @@
 {
-  "index": "📚 Learn with me",
+  "index": {
+    "title": "📚 Learn",
+    "display": "hidden"
+  },
   "c": "C"
 }
