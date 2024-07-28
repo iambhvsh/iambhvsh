@@ -1,7 +1,7 @@
 {
-  "index": {
-    "title": "📚 Learn",
-    "display": "hidden"
-  },
-  "c": "C"
+  "index": "Learn",
+  "c": {
+    "title": "C",
+    "type": "page"
+  }
 }
