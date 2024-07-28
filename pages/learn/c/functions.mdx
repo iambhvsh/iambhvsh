@@ -1,0 +1,153 @@
+# Functions in C - A Simple Guide
+
+Functions in C are like small programs within a larger program. They help you organize your code by breaking it into smaller, manageable parts. This guide will explain what functions are, their types, how to create and use them, with simple examples.
+
+## What is a Function?
+
+A function is a block of code that performs a specific task. It can take inputs, process them, and optionally return a result. Functions make your code easier to read, debug, and reuse.
+
+## Types of Functions
+
+1. **Library Functions:** Predefined functions in C libraries (e.g., `printf()`, `scanf()`). You use these by including the necessary header files.
+2. **User-defined Functions:** Functions you create yourself to perform specific tasks.
+
+### Library Functions Example
+
+Library functions are already written for you. You just need to call them.
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n"); // printf is a library function
+    return 0;
+}
+```
+
+### User-defined Functions Example
+
+You write these functions yourself.
+
+```c
+#include <stdio.h>
+
+// Function definition
+void greet() {
+    printf("Hello from the function!\n");
+}
+
+int main() {
+    greet(); // Function call
+    return 0;
+}
+```
+
+## Creating a Function
+
+To create a function, you need to define it. Here's the syntax:
+
+```c
+return_type function_name(parameter_list) {
+    // code to execute
+}
+```
+
+- **return_type:** The type of value the function returns. Use `void` if it doesn't return anything.
+- **function_name:** The name you give to the function.
+- **parameter_list:** The list of inputs (parameters) the function takes. This can be empty if the function takes no inputs.
+
+### Simple Function Example
+
+Let's create a function that adds two numbers.
+
+```c
+#include <stdio.h>
+
+// Function definition
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result;
+    result = add(3, 4); // Function call
+    printf("Result: %d\n", result);
+    return 0;
+}
+```
+
+In this example:
+- `add` is the function name.
+- `int` is the return type, meaning the function returns an integer.
+- `int a, int b` are parameters.
+
+## Function Declaration and Definition
+
+### Function Declaration
+
+You can declare a function at the beginning of your program. This tells the compiler about the function's name, return type, and parameters.
+
+```c
+return_type function_name(parameter_list);
+```
+
+### Function Definition
+
+You define what the function does.
+
+```c
+return_type function_name(parameter_list) {
+    // function body
+}
+```
+
+### Example with Declaration and Definition
+
+```c
+#include <stdio.h>
+
+// Function declaration
+int multiply(int, int);
+
+int main() {
+    int product;
+    product = multiply(5, 6); // Function call
+    printf("Product: %d\n", product);
+    return 0;
+}
+
+// Function definition
+int multiply(int a, int b) {
+    return a * b;
+}
+```
+
+## Calling a Function
+
+You call a function by writing its name followed by parentheses with arguments (if any).
+
+```c
+function_name(arguments);
+```
+
+### Example
+
+```c copy
+#include <stdio.h>
+
+// Function definition
+void sayHello(char name[]) {
+    printf("Hello, %s!\n", name);
+}
+
+int main() {
+    sayHello("Alice"); // Function call
+    return 0;
+}
+```
+
+## Summary
+
+Functions in C help you break down your code into smaller, reusable parts. There are library functions and user-defined functions. You create a function by defining it, and you use it by calling it in your code. Functions can have different types based on whether they take parameters and/or return a value.
+
+Understanding functions will make your code cleaner and easier to manage.
