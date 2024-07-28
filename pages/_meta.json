@@ -1,12 +1,7 @@
 {
-  "index": "👤 Introduction",
-  "learn": {
-    "title": "📚 Learn with me",
-    "type": "page"
-  },
-  "projects": "⚒️ Projects",
+  "index": "Introduction",
   "github": {
-    "title": "📂 Github",
+    "title": "Github",
     "type": "page",
     "href": "https://github.com/iambhvsh",
     "newWindow": true
