@@ -31,18 +31,20 @@ const config: DocsThemeConfig = {
   head: () => {
     const { asPath, defaultLocale, locale } = useRouter();
     const { frontMatter } = useConfig();
-    const url =
-      'https://iambhvsh.vercel.app' +
+    const baseUrl = 'https://iambhvsh.vercel.app';
+    const canonicalUrl =
+      baseUrl +
       (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
     return (
       <>
-        <meta property="og:url" content={url} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={frontMatter.title || 'iambhvsh'} />
         <meta
           property="og:description"
           content={frontMatter.description || 'Personal website and more by Bhavesh Patil'}
         />
+        <link rel="canonical" href={canonicalUrl} />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
