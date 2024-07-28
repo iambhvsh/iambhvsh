@@ -1,50 +1,51 @@
 name: Update Packages
 
 on:
-  schedule:
-    - cron: '0 */3 * * *' # Runs every 3 hours
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Update Packages"]
+    types:
+      - completed
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-    - name: Install dependencies
-      run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
 
-    - name: Install npm-check-updates
-      run: pnpm add -g npm-check-updates
+      - name: Install npm-check-updates
+        run: pnpm add -g npm-check-updates
 
-    - name: Update package.json dependencies
-      run: |
-        ncu '/dependencies/.*' -u
-        ncu '/devDependencies/.*' -u
+      - name: Update package.json dependencies
+        run: |
+          ncu '/dependencies/.*' -u
+          ncu '/devDependencies/.*' -u
 
-    - name: Install updated dependencies
-      run: pnpm install
+      - name: Install updated dependencies
+        run: pnpm install
 
-    - name: Update Browserslist database
-      run: npx browserslist@latest --update-db
+      - name: Update Browserslist database
+        run: npx browserslist@latest --update-db
 
-    - name: Build the project
-      run: pnpm run build
+      - name: Build the project
+        run: pnpm run build
 
-    - name: Commit and push changes
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add .
-        git commit -m 'chore: update dependencies to latest versions'
-        git push origin HEAD:main
-        
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m 'chore: update dependencies to latest versions'
+          git push origin HEAD:main
