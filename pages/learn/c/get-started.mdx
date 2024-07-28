@@ -1,0 +1,102 @@
+# Setup 💻
+
+Welcome to the C programming setup guide! Follow these steps to set up your environment and start coding in C. 🚀
+
+## Step 1: Install a C Compiler 🛠️
+
+### Windows
+
+1. **Download MinGW:**
+   - Go to the [MinGW-w64](https://sourceforge.net/projects/mingw-w64/) download page.
+   - Download the latest version of MinGW-w64.
+
+2. **Install MinGW:**
+   - Run the installer and follow the prompts.
+   - Choose the architecture (32-bit or 64-bit) based on your system.
+   - Select the latest version of GCC.
+   - Choose the installation directory and complete the installation.
+
+3. **Set Environment Variables:**
+   - Open Control Panel and navigate to **System and Security > System > Advanced system settings**.
+   - Click on **Environment Variables**.
+   - Under **System variables**, find the `Path` variable and click **Edit**.
+   - Add the path to the `bin` directory of your MinGW installation (e.g., `C:\Program Files\mingw-w64\x86_64-8.1.0-win32-seh-rt_v6-rev0\mingw64\bin`).
+   - Click **OK** to save.
+
+### macOS
+
+1. **Install Xcode Command Line Tools:**
+   - Open Terminal.
+   - Run the following command:
+     ```sh copy
+     xcode-select --install
+     ```
+   - Follow the prompts to complete the installation.
+
+### Linux
+
+1. **Install GCC:**
+   - Open Terminal.
+   - For Debian-based systems (like Ubuntu), run:
+     ```sh copy
+     sudo apt update
+     sudo apt install build-essential
+     ```
+   - For Red Hat-based systems (like Fedora), run:
+     ```sh copy
+     sudo dnf groupinstall "Development Tools"
+     ```
+
+## Step 2: Write Your First C Program ✍️
+
+1. **Open a Text Editor:**
+   - You can use any text editor (e.g., Visual Studio Code, Sublime Text, or even Notepad).
+
+2. **Write the Code:**
+   - Create a new file and save it as `hello.c`.
+   - Write the following code:
+     ```c copy
+     #include <stdio.h>
+
+     int main() {
+         printf("Hello, World!\n");
+         return 0;
+     }
+     ```
+
+## Step 3: Compile and Run Your Program 🏃
+
+1. **Open a Terminal/Command Prompt:**
+
+2. **Navigate to the Directory:**
+   - Use `cd` to navigate to the directory where `hello.c` is saved.
+
+3. **Compile the Program:**
+   - Run the following command:
+     ```sh copy
+     gcc hello.c -o hello
+     ```
+   - This will compile `hello.c` and create an executable named `hello`.
+
+4. **Run the Program:**
+   - On Windows, run:
+     ```sh copy
+     hello.exe
+     ```
+   - On macOS/Linux, run:
+     ```sh copy
+     ./hello
+     ```
+
+   - You should see the output:
+     ```sh copy
+     Hello, World!
+     ```
+
+## Step 4: Run C Code Online 🌐
+
+If you prefer, you can also run C code online without installing a compiler. Use the [Programiz C Compiler](https://www.programiz.com/online-compiler/3wQBJ5qtfTsfB). Simply paste your code and run it in your browser.
+
+## Conclusion 🎉
+
+Congratulations! You've successfully set up your C programming environment and run your first C program. Happy coding! 🌟
