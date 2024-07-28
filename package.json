@@ -4,9 +4,9 @@
   "description": "My personal website.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/generate-sitemap.js",
+    "build": "next build && next-sitemap",
     "start": "next start",
-    "generate-sitemap": "node scripts/generate-sitemap.js"
+    "generate-sitemap": "next-sitemap"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,7 @@
     "nextra-theme-docs": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "axios": "^1.4.0",
-    "cheerio": "^1.0.0-rc.12"
+    "next-sitemap": "^3.1.1"
   },
   "devDependencies": {
     "@types/node": "20.14.12",
