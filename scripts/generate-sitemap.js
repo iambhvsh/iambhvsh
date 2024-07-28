@@ -8,6 +8,7 @@ const baseURL = 'https://iambhvsh.vercel.app';
 const crawlSite = async (url) => {
   const crawledUrls = new Set();
   const toCrawl = [url];
+  const urlsData = [];
 
   while (toCrawl.length) {
     const currentUrl = toCrawl.pop();
@@ -18,9 +19,15 @@ const crawlSite = async (url) => {
       const { data } = await axios.get(currentUrl);
       const $ = cheerio.load(data);
 
+      const lastmod = new Date().toISOString();
+      const changefreq = 'monthly';
+      const priority = currentUrl === baseURL ? 1.0 : 0.8;
+
+      urlsData.push({ loc: currentUrl, lastmod, changefreq, priority });
+
       $('a').each((_, element) => {
         const href = $(element).attr('href');
-        if (href && href.startsWith('/') && !href.includes('#')) {
+        if (href && href.startsWith('/') && !href.includes('#') && !href.startsWith('//')) {
           const absoluteUrl = baseURL + href;
           if (!crawledUrls.has(absoluteUrl)) {
             toCrawl.push(absoluteUrl);
@@ -34,7 +41,7 @@ const crawlSite = async (url) => {
     }
   }
 
-  return Array.from(crawledUrls);
+  return urlsData;
 };
 
 const generateSitemap = (urls) => {
@@ -42,7 +49,10 @@ const generateSitemap = (urls) => {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${urls.map((url) => `
     <url>
-      <loc>${url}</loc>
+      <loc>${url.loc}</loc>
+      <lastmod>${url.lastmod}</lastmod>
+      <changefreq>${url.changefreq}</changefreq>
+      <priority>${url.priority}</priority>
     </url>
   `).join('')}
 </urlset>`;
@@ -52,10 +62,9 @@ const generateSitemap = (urls) => {
   console.log(`Sitemap saved to ${sitemapPath}`);
 };
 
-const main = async () => {
+const generateSiteMapForNextBuild = async () => {
   const urls = await crawlSite(baseURL);
   generateSitemap(urls);
 };
 
-main().catch(console.error);
-    
+module.exports = generateSiteMapForNextBuild;
