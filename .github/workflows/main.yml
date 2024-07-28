@@ -1,11 +1,9 @@
 name: Update Packages
 
 on:
+  schedule:
+    - cron: '*/15 * * * *' # Runs every 15 minutes
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Update Packages"]
-    types:
-      - completed
 
 jobs:
   update:
