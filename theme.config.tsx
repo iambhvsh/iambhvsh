@@ -23,7 +23,7 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/iambhvsh',
   },
-  docsRepositoryBase: 'https://github.com/iambhvsh/iambhvsh',
+  docsRepositoryBase: 'https://github.com/iambhvsh/iambhvsh/tree/main',
   footer: {
     text: '🤩 Bhavesh Patil',
   },
