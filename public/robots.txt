@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://iambhvsh.vercel.app
+
+# Sitemaps
+Sitemap: https://iambhvsh.vercel.app/sitemap.xml
