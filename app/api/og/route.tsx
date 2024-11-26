@@ -1,12 +1,12 @@
-import { AUTHOR } from '../../../lib/shared'
+import { AUTHOR } from '../../../lib/shared';
 
-export const runtime = 'edge'
+export const runtime = 'edge';
 
 export async function GET(request: Request) {
   try {
-    const { searchParams } = new URL(request.url)
-    const title = searchParams.get('title')
-    const type = searchParams.get('type') || 'website'
+    const { searchParams } = new URL(request.url);
+    const title = searchParams.get('title');
+    const type = searchParams.get('type') || 'website';
 
     // Create SVG for OG image
     const svg = `
@@ -32,17 +32,17 @@ export async function GET(request: Request) {
           ${type === 'article' ? 'Blog Post by ' : ''}${AUTHOR.name}
         </text>
       </svg>
-    `
+    `;
 
     return new Response(svg, {
       headers: {
         'Content-Type': 'image/svg+xml',
         'Cache-Control': 'public, max-age=31536000, immutable'
       },
-    })
+    });
   } catch (e) {
     return new Response(`Failed to generate image`, {
       status: 500,
-    })
+    });
   }
-} 
+}
