@@ -9,10 +9,6 @@
     ·
     <a href="https://github.com/iambhvsh/iambhvsh/issues">Request Feature</a>
   </p>
-
-  <img src="https://img.shields.io/github/license/iambhvsh/iambhvsh?style=flat-square" alt="License" />
-  <img src="https://img.shields.io/github/stars/iambhvsh/iambhvsh?style=flat-square" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/iambhvsh/iambhvsh?style=flat-square" alt="Forks" />
 </div>
 
 ## ✨ Features
