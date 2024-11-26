@@ -1,0 +1,157 @@
+---
+title: "Building My Portfolio Website with Next.js 14"
+date: "2024-03-14"
+description: "A detailed look at how I built my portfolio website using Next.js, Tailwind CSS, and TypeScript"
+excerpt: "Learn about the tech stack, architecture decisions, and implementation details of my personal portfolio website."
+tags: ["next.js", "tailwind", "typescript", "portfolio"]
+coverImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop"
+---
+
+# Building My Portfolio Website
+
+I recently rebuilt my portfolio website using modern web technologies. In this post, I'll walk you through the tech stack, architecture decisions, and key features.
+
+## Tech Stack
+
+- **Next.js 14**: For server-side rendering and routing
+- **TypeScript**: For type safety
+- **Tailwind CSS**: For styling
+- **MDX**: For blog posts
+- **Lucide Icons**: For beautiful icons
+
+## Key Features
+
+### 1. Dynamic Blog with MDX
+
+I implemented a blog system using MDX, which allows me to write posts in Markdown with JSX components:
+
+```typescript
+// lib/blog.ts
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+
+export function getPostBySlug(slug: string) {
+  const fullPath = path.join(process.cwd(), 'app/blog/posts', `${slug}.mdx`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContents)
+  
+  return {
+    slug,
+    content,
+    ...data
+  }
+}
+```
+
+### 2. Responsive Navigation
+
+The navigation system adapts to different screen sizes:
+
+```typescript
+// components/Navigation.tsx
+export default function Navigation() {
+  return (
+    <nav className="fixed top-0 w-full bg-zinc-900/80 backdrop-blur-md z-50">
+      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <Logo />
+        <DesktopNav />
+        <MobileNav />
+      </div>
+    </nav>
+  )
+}
+```
+
+### 3. Dark Mode Design
+
+I chose a dark theme for better readability and modern aesthetics:
+
+```typescript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        zinc: {
+          850: '#1f1f1f',
+        },
+      },
+    },
+  },
+}
+```
+
+### 4. Search Functionality
+
+Implemented a search system that works across pages and blog posts:
+
+```typescript
+// api/search/route.ts
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url)
+  const query = searchParams.get('q')
+
+  // Search implementation
+  const results = await searchContent(query)
+  return NextResponse.json(results)
+}
+```
+
+## Performance Optimizations
+
+1. **Image Optimization**:
+```typescript
+<Image
+  src={post.coverImage}
+  alt={post.title}
+  width={1200}
+  height={630}
+  className="rounded-xl"
+  priority
+/>
+```
+
+2. **Code Splitting**:
+```typescript
+const MDXContent = dynamic(() => import('@/components/MDXContent'), {
+  loading: () => <div>Loading...</div>
+})
+```
+
+## Deployment
+
+The site is deployed on Vercel, which provides:
+- Automatic deployments
+- Edge functions
+- Analytics
+- Great performance out of the box
+
+## Lessons Learned
+
+1. **TypeScript is Worth It**: While it requires more initial setup, TypeScript caught many bugs before they reached production.
+
+2. **MDX for Content**: Using MDX for blog posts provides great flexibility in mixing markdown with React components.
+
+3. **Tailwind's Utility-First Approach**: Tailwind CSS made styling consistent and maintainable across the project.
+
+## Future Improvements
+
+- Add authentication for a comment system
+- Implement a newsletter
+- Add more interactive components
+- Improve search with better algorithms
+
+## Conclusion
+
+Building this portfolio was a great learning experience. The combination of Next.js, TypeScript, and Tailwind CSS proved to be powerful and developer-friendly.
+
+Feel free to check out the [source code on GitHub](https://github.com/iambhvsh/portfolio) and let me know what you think!
+
+> "The best way to learn is to build" - Every Developer Ever
+
+![Coding Setup](https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop)
+
+---
+
+I hope this post helps others who are looking to build their own portfolio websites. If you have any questions, feel free to reach out!
