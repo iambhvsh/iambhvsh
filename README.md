@@ -73,4 +73,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Next.js](https://nextjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Vercel](https://vercel.com) 
+- [Vercel](https://vercel.com)
+
+> Thank You!
