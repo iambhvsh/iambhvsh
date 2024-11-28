@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server'
 import { PROJECTS } from '../../../lib/projects'
 import { SITE_DATA } from '../../../lib/shared'
-import { getAllPosts } from '../../../lib/blog'
+import { getAllPosts, type BlogPost } from '../../../lib/blog'
 
-export async function GET(req: Request) {
+export async function GET() {
   try {
     // Convert pages to search results
     const pageResults = SITE_DATA.pages.map(page => ({
@@ -25,7 +25,7 @@ export async function GET(req: Request) {
     }))
 
     // Convert blog posts to search results
-    const blogResults = getAllPosts().map(post => ({
+    const blogResults = (await getAllPosts()).map((post: BlogPost) => ({
       id: post.slug,
       title: post.title,
       description: post.excerpt,

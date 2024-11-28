@@ -4,9 +4,21 @@ self.addEventListener('install', (event) => {
       return cache.addAll([
         '/',
         '/index.html',
-        '/app.js',
-        '/style.css',
-        // Add other assets to cache
+        '/manifest.json',
+        '/robots.txt',
+        '/projects',
+        '/blog',
+        'https://placehold.co/72x72/000000/FFFFFF/png?text=B&font=montserrat',
+        'https://placehold.co/96x96/000000/FFFFFF/png?text=B&font=montserrat', 
+        'https://placehold.co/128x128/000000/FFFFFF/png?text=B&font=montserrat',
+        'https://placehold.co/144x144/000000/FFFFFF/png?text=B&font=montserrat',
+        'https://placehold.co/152x152/000000/FFFFFF/png?text=B&font=montserrat',
+        'https://placehold.co/192x192/000000/FFFFFF/png?text=B&font=montserrat',
+        'https://placehold.co/384x384/000000/FFFFFF/png?text=B&font=montserrat',
+        'https://placehold.co/1200x630/1a1a1a/FFFFFF/png?text=Pixel+Store',
+        'https://placehold.co/1200x630/1a1a1a/FFFFFF/png?text=DarkValor',
+        'https://placehold.co/1200x630/1a1a1a/FFFFFF/png?text=StackX',
+        'https://placehold.co/1200x630/1a1a1a/FFFFFF/png?text=Chat+App'
       ]);
     })
   );

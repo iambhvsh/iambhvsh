@@ -1,4 +1,5 @@
-import { GithubIcon, ExternalLinkIcon } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa'
+import { FiExternalLink } from 'react-icons/fi'
 import Link from 'next/link'
 import Image from 'next/image'
 import { PROJECTS } from '../../lib/projects'
@@ -41,7 +42,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-black/50 backdrop-blur text-zinc-400 hover:text-white hover:bg-black/70 transition-all"
                 >
-                  <GithubIcon className="w-5 h-5" />
+                  <FaGithub className="w-5 h-5" />
                 </Link>
                 {project.links.live && (
                   <Link 
@@ -50,7 +51,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-black/50 backdrop-blur text-zinc-400 hover:text-white hover:bg-black/70 transition-all"
                   >
-                    <ExternalLinkIcon className="w-5 h-5" />
+                    <FiExternalLink className="w-5 h-5" />
                   </Link>
                 )}
               </div>

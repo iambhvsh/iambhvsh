@@ -1,4 +1,5 @@
-import { GraduationCap, Award, Book, ExternalLink } from 'lucide-react'
+import { FaGraduationCap, FaAward, FaBook } from 'react-icons/fa'
+import { FiExternalLink } from 'react-icons/fi'
 import Link from 'next/link'
 
 const education = [
@@ -7,14 +8,14 @@ const education = [
     degree: 'Bachelor of Science in Information Technology',
     institution: 'Dr. G. Y. Pathrikar College of Computer Science and IT, MGM University',
     description: 'Currently pursuing my degree with a focus on web development and software engineering.',
-    icon: GraduationCap
+    icon: FaGraduationCap
   },
   {
     period: '2024',
     degree: 'Next.js Certification',
     institution: 'Programming Hub',
     description: 'Completed comprehensive Next.js course covering modern web development concepts and full-stack development.',
-    icon: Award,
+    icon: FaAward,
     certificateLink: '/images/nextjs-certificate.jpg'
   },
   {
@@ -22,14 +23,14 @@ const education = [
     degree: 'Higher Secondary Education',
     institution: 'DES, High School, Malkapur',
     description: 'Completed HSC with focus on Physics and Mathematics.',
-    icon: Book
+    icon: FaBook
   },
   {
     period: '2022 - 2023',
     degree: 'Secondary Education',
     institution: 'MIT VGS, Chattrapati Sambhajinagar',
     description: 'Completed SSC with distinction.',
-    icon: Award
+    icon: FaAward
   }
 ]
 
@@ -73,7 +74,7 @@ export default function Education() {
                     className="text-sm text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1"
                   >
                     View Certificate
-                    <ExternalLink className="w-4 h-4" />
+                    <FiExternalLink className="w-4 h-4" />
                   </Link>
                 </div>
               )}

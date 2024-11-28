@@ -1,33 +1,17 @@
-<div align="center">
-  <h1>🚀 Bhavesh Patil</h1>
-  <p>My personal portfolio built with modern web technologies</p>
-  
-  <p>
-    <a href="https://iambhvsh.vercel.app">View Demo</a>
-    ·
-    <a href="https://github.com/iambhvsh/iambhvsh/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/iambhvsh/iambhvsh/issues">Request Feature</a>
-  </p>
-</div>
+# Project Name
 
-## ✨ Features
+Brief description of your project.
 
-- 🎨 **Project Showcase** - Display your projects beautifully
-- 🔍 **Search Functionality** - Search through posts and projects
-- 🌙 **Dark Mode** - Easy on the eyes
-- 📱 **Responsive Design** - Looks great on all devices
-- 🔧 **SEO Optimized** - Better visibility on search engines
+## Technologies Used
 
-## 🛠️ Tech Stack
+- Next.js
+- TypeScript
+- Tailwind CSS
+- [Add other technologies you've used]
 
-- [Next.js 13](https://nextjs.org/) - React framework with App Router
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [MDX](https://mdxjs.com/) - Markdown with JSX
-- [Vercel](https://vercel.com/) - Deployment platform
+## Getting Started
 
-## 🚀 Quick Start
+First, run the development server:
 
 ```bash
 # Clone the repository

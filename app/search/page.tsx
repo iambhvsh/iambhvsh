@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDebounce } from 'use-debounce'
 import Link from 'next/link'
-import { SearchIcon } from 'lucide-react'
+import { FiSearch } from 'react-icons/fi'
 import { SearchResult } from '../../lib/projects'
 import Spinner from '../components/Spinner'
 
@@ -74,7 +74,7 @@ export default function Search() {
             placeholder="Search across posts, projects and links..."
             className="w-full px-4 py-3 pl-12 bg-transparent border border-zinc-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500/30 focus:border-blue-500/30"
           />
-          <SearchIcon className="absolute left-4 top-[60%] -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
+          <FiSearch className="absolute left-4 top-[60%] -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
         </div>
       </div>
 

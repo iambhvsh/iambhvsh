@@ -8,10 +8,16 @@ export async function GET(request: Request) {
     const title = searchParams.get('title');
     const type = searchParams.get('type') || 'website';
 
-    // Create SVG for OG image
     const svg = `
       <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="1200" height="630" fill="black"/>
+        <rect width="1200" height="630" fill="url(#gradient)" />
+        <defs>
+          <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#000000" />
+            <stop offset="1" stop-color="#111111" />
+          </linearGradient>
+        </defs>
         <text 
           x="80" 
           y="200" 
@@ -37,10 +43,12 @@ export async function GET(request: Request) {
     return new Response(svg, {
       headers: {
         'Content-Type': 'image/svg+xml',
-        'Cache-Control': 'public, max-age=31536000, immutable'
+        'Cache-Control': 'public, max-age=31536000, immutable',
+        'x-content-type-options': 'nosniff'
       },
     });
-  } catch (e) {
+  } catch (error) {
+    console.error('Error generating OG image:', error);
     return new Response(`Failed to generate image`, {
       status: 500,
     });

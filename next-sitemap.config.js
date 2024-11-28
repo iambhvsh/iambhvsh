@@ -4,7 +4,7 @@ module.exports = {
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/api/*'],
-  transform: async (config, path) => {
+  transform: async (_config, path) => {
     return {
       loc: path,
       changefreq: path === '/' ? 'daily' : 'weekly',

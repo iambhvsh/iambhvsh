@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import { Download, X } from 'lucide-react'
+import { FiX } from 'react-icons/fi'
 import Image from 'next/image'
 
 type PWAContextType = {
@@ -36,7 +36,7 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
     }
 
     await deferredPrompt.prompt()
-    const { outcome } = await deferredPrompt.userChoice
+    await deferredPrompt.userChoice
     setDeferredPrompt(null)
     setShowPrompt(false)
   }
@@ -56,7 +56,7 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
                 className="absolute -bottom-10 left-6 rounded-2xl shadow-xl"
               />
               <button onClick={() => setShowPrompt(false)} className="absolute top-4 right-4 p-2 rounded-full bg-black/20 text-white/80 hover:bg-black/30">
-                <X size={16} />
+                <FiX size={16} />
               </button>
             </div>
             <div className="p-6 pt-14">

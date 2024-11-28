@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Menu, X, Download } from 'lucide-react'
+import { FiMenu, FiX, FiDownload } from 'react-icons/fi'
 import { SITE_DATA } from '../../lib/shared'
 import { usePWA } from './PWA'
 
@@ -28,9 +28,9 @@ export default function Navbar() {
               aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
-                <X className="w-6 h-6" />
+                <FiX className="w-6 h-6" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <FiMenu className="w-6 h-6" />
               )}
             </button>
           </div>
@@ -60,7 +60,7 @@ export default function Navbar() {
             </Link>
           ))}
           <button onClick={showInstallPrompt} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white">
-            <Download className="w-5 h-5" />
+            <FiDownload className="w-5 h-5" />
             Install App
           </button>
         </div>

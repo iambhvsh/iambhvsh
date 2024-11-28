@@ -1,25 +1,26 @@
 import Link from 'next/link'
-import { GithubIcon, TwitterIcon, LinkedinIcon, MailIcon, ClockIcon, MapPinIcon } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FiMail, FiClock, FiMapPin } from 'react-icons/fi'
 
 const socialLinks = [
   {
     name: 'GitHub',
     url: 'https://github.com/iambhvsh',
-    icon: GithubIcon,
+    icon: FaGithub,
     username: '@iambhvsh',
     color: 'hover:text-[#333] dark:hover:text-white'
   },
   {
     name: 'LinkedIn',
     url: 'https://linkedin.com/in/iambhvsh',
-    icon: LinkedinIcon,
+    icon: FaLinkedin,
     username: 'Bhavesh',
     color: 'hover:text-[#0A66C2]'
   },
   {
     name: 'Email',
     url: 'mailto:iambhvsh@gmail.com',
-    icon: MailIcon,
+    icon: FiMail,
     username: 'iambhvsh@gmail.com',
     color: 'hover:text-[#EA4335]'
   }
@@ -31,10 +32,10 @@ export default function Contact() {
       <div className="space-y-16">
         {/* Header Section */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">Let's Connect</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Let&apos;s Connect</h1>
           <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl">
             Whether you have a project in mind, want to collaborate, or just want to say hi, 
-            I'd love to hear from you. Choose your preferred way to connect:
+            I&apos;d love to hear from you. Choose your preferred way to connect:
           </p>
         </div>
 
@@ -69,7 +70,7 @@ export default function Contact() {
           <div className="space-y-6">
             <div className="flex items-center gap-4 text-xl font-semibold">
               <div className="p-3 rounded-xl bg-gray-50 dark:bg-gray-900/50">
-                <ClockIcon className="w-6 h-6" />
+                <FiClock className="w-6 h-6" />
               </div>
               <h2>Working Hours</h2>
             </div>
@@ -83,7 +84,7 @@ export default function Contact() {
           <div className="space-y-6">
             <div className="flex items-center gap-4 text-xl font-semibold">
               <div className="p-3 rounded-xl bg-gray-50 dark:bg-gray-900/50">
-                <MapPinIcon className="w-6 h-6" />
+                <FiMapPin className="w-6 h-6" />
               </div>
               <h2>Location</h2>
             </div>

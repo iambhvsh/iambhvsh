@@ -5,8 +5,8 @@ import { formatDate } from '../../lib/shared'
 import { AUTHOR } from '../../lib/shared'
 import VerifiedBadge from '../components/VerifiedBadge'
 
-export default function Blog() {
-  const posts = getAllPosts()
+export default async function Blog() {
+  const posts = await getAllPosts()
 
   return (
     <div className="max-w-3xl mx-auto px-4 pt-24 pb-12">

@@ -1,11 +1,11 @@
-import { CodeIcon, GithubIcon, LinkedinIcon } from 'lucide-react'
+import { FaCode, FaGithub, FaLinkedin } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const socialLinks = [
-  { name: 'Source', url: 'https://github.com/iambhvsh/iambhvsh', icon: CodeIcon, hoverColor: 'hover:text-emerald-400' },
-  { name: 'GitHub', url: 'https://github.com/iambhvsh', icon: GithubIcon, hoverColor: 'hover:text-purple-400' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/iambhvsh/', icon: LinkedinIcon, hoverColor: 'hover:text-blue-400' },
+  { name: 'Source', url: 'https://github.com/iambhvsh/iambhvsh', icon: FaCode, hoverColor: 'hover:text-emerald-400' },
+  { name: 'GitHub', url: 'https://github.com/iambhvsh', icon: FaGithub, hoverColor: 'hover:text-purple-400' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/iambhvsh/', icon: FaLinkedin, hoverColor: 'hover:text-blue-400' },
 ]
 
 export default function Footer() {

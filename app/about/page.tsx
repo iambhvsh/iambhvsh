@@ -1,5 +1,6 @@
 import { SITE_DATA, AUTHOR } from '../../lib/shared'
-import { GithubIcon, LinkedinIcon, MailIcon, MapPinIcon } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FiMail, FiMapPin } from 'react-icons/fi'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -39,7 +40,7 @@ export default function About() {
           <h1 className="text-3xl md:text-4xl font-bold mb-4">{AUTHOR.name}</h1>
           <p className="text-xl text-gray-400 mb-4">Frontend Developer</p>
           <div className="flex items-center gap-2 text-gray-400">
-            <MapPinIcon className="w-4 h-4" />
+            <FiMapPin className="w-4 h-4" />
             <span>{AUTHOR.location}</span>
           </div>
           <div className="flex gap-4 mt-6">
@@ -50,7 +51,7 @@ export default function About() {
               rel="noopener noreferrer"
               aria-label="GitHub"
             >
-              <GithubIcon className="w-5 h-5" />
+              <FaGithub className="w-5 h-5" />
             </Link>
             <Link 
               href={SITE_DATA.social.find(s => s.name === 'LinkedIn')?.url || '#'}
@@ -59,14 +60,14 @@ export default function About() {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <LinkedinIcon className="w-5 h-5" />
+              <FaLinkedin className="w-5 h-5" />
             </Link>
             <Link 
               href={`mailto:${AUTHOR.email}`}
               className="p-2 rounded-full bg-zinc-900 hover:bg-zinc-800 text-gray-400 hover:text-white transition-all hover:scale-110"
               aria-label="Email"
             >
-              <MailIcon className="w-5 h-5" />
+              <FiMail className="w-5 h-5" />
             </Link>
           </div>
         </div>
@@ -75,12 +76,12 @@ export default function About() {
       <div className="space-y-6 mb-16">
         <h2 className="text-2xl font-bold">About Me</h2>
         <p className="text-lg text-gray-300">
-          I'm a passionate Frontend Developer focused on creating clean, efficient, and user-friendly web applications. 
+          I&apos;ve worked as a passionate Frontend Developer focused on creating clean, efficient, and user-friendly web applications. 
           My journey in web development started with curiosity and has evolved into a deep love for crafting beautiful user interfaces.
         </p>
         <p className="text-lg text-gray-300">
           I specialize in modern web technologies like Next.js and React.js, and I enjoy building responsive and performant web applications. 
-          When I'm not coding, you can find me exploring new technologies or contributing to open-source projects.
+          When I&apos;m not coding, you can find me exploring new technologies or contributing to open-source projects.
         </p>
       </div>
 

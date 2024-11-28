@@ -10,20 +10,25 @@
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
   --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
+  --sh-property: #0550ae;
+  --sh-entity: #249a97;
   --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+  --sh-string: #00a99a;
+  --sh-keyword: #f47067;
+  --sh-comment: #a19595;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
+    --sh-class: #61afef;
+    --sh-identifier: #abb2bf;
+    --sh-sign: #56b6c2;
+    --sh-string: #98c379;
+    --sh-keyword: #c678dd;
+    --sh-comment: #7f848e;
+    --sh-jsxliterals: #e5c07b;
+    --sh-property: #e06c75;
+    --sh-entity: #61afef;
   }
   html {
     color-scheme: dark;
@@ -66,21 +71,16 @@ html {
   }
 
   .prose pre {
-    @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-4 px-6 text-sm my-6;
+    @apply bg-[#090909];
+    overflow-x: auto;
+    border-radius: 0.5rem;
   }
 
   .prose code {
-    @apply px-1.5 py-0.5 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-200;
-  }
-
-  .prose pre code {
-    @apply p-0 bg-transparent text-inherit;
-    border: initial;
-    line-height: 1.6;
-  }
-
-  .prose code span {
-    @apply font-medium;
+    @apply bg-[#090909];
+    font-family: 'Fira Code', monospace;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .prose img {
@@ -214,69 +214,87 @@ table {
   text-wrap: balance;
 }
 
-body {
-  font-family: 'Space Grotesk', sans-serif;
-}
-
 /* Code blocks */
-pre {
-  overflow-x: auto;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background: #1a1a1a !important;
+[data-rehype-pretty-code-fragment] {
+  @apply relative;
+}
+
+[data-rehype-pretty-code-fragment] code {
+  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0;
+  font-family: 'Fira Code', monospace;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
-pre > code {
-  display: grid;
-  counter-reset: line;
+[data-rehype-pretty-code-fragment] .line {
+  @apply px-4 min-h-[1.25rem];
 }
 
-pre > code > .line {
-  padding: 0 1rem;
-  border-left: 2px solid transparent;
+[data-rehype-pretty-code-fragment] [data-line-numbers] .line {
+  @apply px-2;
 }
 
-pre > code > .line:before {
-  counter-increment: line;
+[data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
+  @apply text-zinc-50/20 mr-4;
   content: counter(line);
+  counter-increment: line;
+}
+
+[data-rehype-pretty-code-fragment] .line--highlighted {
+  @apply bg-zinc-700/50;
+}
+
+[data-rehype-pretty-code-fragment] .word--highlighted {
+  @apply rounded-md bg-zinc-700/50 p-1;
+}
+
+[data-rehype-pretty-code-title] {
+  @apply mt-4 px-4 py-2 font-mono text-xs font-medium text-zinc-400 border-b border-zinc-700/50;
+}
+
+[data-rehype-pretty-code-title] + pre {
+  @apply mt-0;
+}
+
+/* Add these rules to reset code block styles */
+pre, code {
+  all: unset;
+  font-family: 'Fira Code', monospace !important;
+}
+
+pre {
+  display: block;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+}
+
+code {
   display: inline-block;
-  width: 1rem;
-  margin-right: 1rem;
-  text-align: right;
-  color: #666;
+  white-space: pre;
+  word-wrap: normal;
 }
 
-pre > code > .line.highlighted {
-  background: rgba(200,200,255,0.1);
-  border-left-color: #3b82f6;
+/* Add these styles */
+code {
+  font-family: 'Fira Code', monospace;
 }
 
-.word {
-  background: rgba(200,200,255,0.1);
-  padding: 0.25rem;
-  border-radius: 0.25rem;
+[data-highlighted-line] {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 2px solid #3b82f6;
+  margin: 0 -1rem;
+  padding: 0 1rem;
 }
 
-/* Copy button */
-.code-block {
-  position: relative;
+[data-highlighted-chars] {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px;
+  border-radius: 2px;
 }
 
-.copy-button {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  padding: 0.5rem;
-  background: rgba(255,255,255,0.1);
-  border-radius: 0.25rem;
-  color: #666;
-  font-size: 0.75rem;
-  transition: all 0.2s;
-}
-
-.copy-button:hover {
-  background: rgba(255,255,255,0.2);
-  color: #fff;
+/* Remove the existing syntax highlighting reset if present */
+[class*="language-"],
+pre[class*="language-"],
+code[class*="language-"] {
+  font-family: 'Fira Code', monospace !important;
 }
