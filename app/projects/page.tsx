@@ -60,7 +60,7 @@ export default function Projects() {
             {/* Project Info */}
             <div className="p-6 space-y-4 bg-[#050505]">
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-400/80 line-clamp-2">

@@ -1,8 +1,8 @@
 import './globals.css';
 import { Space_Grotesk } from 'next/font/google';
+import Providers from './components/Providers';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Providers from './components/Providers';
 import { generateMetadata } from './metadata'
 
 const spaceGrotesk = Space_Grotesk({
@@ -26,12 +26,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
         <script async src="https://platform.twitter.com/widgets.js" />
       </head>
-      <body className={`${spaceGrotesk.className} min-h-screen bg-white dark:bg-black`}>
+      <body className={`${spaceGrotesk.className} min-h-screen bg-black`}>
         <Providers>
           <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </Providers>
       </body>

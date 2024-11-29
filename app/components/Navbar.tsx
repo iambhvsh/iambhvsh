@@ -14,10 +14,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 bg-black z-50 text-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            <Link href="/" className="text-2xl font-bold">iambhvsh</Link>
+          <div className="flex justify-between items-center py-2">
+            <Link href="/" className="text-2xl font-bold duration-300 hover:text-zinc-500">iambhvsh</Link>
             
             {/* Hamburger Button */}
             <button 
@@ -41,7 +41,7 @@ export default function Navbar() {
       <div 
         className={`${
           isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0 pointer-events-none'
-        } fixed top-[73px] left-0 right-0 bottom-0 z-40 bg-black/95 backdrop-blur-md transition-all duration-200 ease-out transform-gpu`}
+        } fixed top-[55px] left-0 right-0 bottom-0 z-40 bg-black text-white transition-all duration-200 ease-out transform-gpu`}
       >
         <div className="max-w-6xl mx-auto px-4 py-6 space-y-2">
           {SITE_DATA.pages.map((item) => (

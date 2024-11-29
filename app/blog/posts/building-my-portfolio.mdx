@@ -51,39 +51,66 @@ export function getPostBySlug(slug: string) {
 
 The navigation system adapts to different screen sizes:
 
-```typescript filename="components/Navigation.tsx"
-// components/Navigation.tsx
-export default function Navigation() {
+```typescript filename="components/Navbar.tsx"
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
+import { FiMenu, FiX } from 'react-icons/fi'
+import { SITE_DATA } from '../../lib/shared'
+
+export default function Navbar() {
+  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
   return (
-    <nav className="fixed top-0 w-full bg-zinc-900/80 backdrop-blur-md z-50">
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Logo />
-        <DesktopNav />
-        <MobileNav />
+    <>
+      <nav className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
+          <Link href="/" className="text-2xl font-bold">iambhvsh</Link>
+          
+          <button 
+            onClick={toggleMenu}
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+          </button>
+        </div>
+      </nav>
+
+      <div 
+        className={`fixed top-[73px] left-0 right-0 bottom-0 z-40 bg-black/95 backdrop-blur-md transition-all duration-200 ease-out transform-gpu ${
+          isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="max-w-6xl mx-auto px-4 py-6 space-y-2">
+          {SITE_DATA.pages.map(({ path, icon: Icon, name }) => (
+            <Link
+              key={path}
+              href={path}
+              onClick={toggleMenu}
+              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+                pathname === path ? 'bg-white/10 text-white' : 'text-gray-400 hover:bg-white/5 hover:text-white'
+              }`}
+            >
+              <Icon className="w-5 h-5" />
+              {name}
+            </Link>
+          ))}
+        </div>
       </div>
-    </nav>
+    </>
   )
 }
 ```
 
 ### 3. Dark Mode Design
 
-I chose a dark theme for better readability and modern aesthetics:
-
-```typescript filename="tailwind.config.js"
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        zinc: {
-          850: '#1f1f1f',
-        },
-      },
-    },
-  },
-}
-```
+I chose a dark theme for better readability and modern aesthetics.
 
 ### 4. Search Functionality
 

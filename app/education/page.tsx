@@ -56,7 +56,7 @@ export default function Education() {
               <span className="text-sm text-blue-400 font-medium mb-2">
                 {item.period}
               </span>
-              <h3 className="text-xl font-semibold mb-1 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl text-white font-semibold mb-1">
                 {item.degree}
               </h3>
               <span className="text-gray-400 text-sm mb-2">

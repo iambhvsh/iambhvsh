@@ -55,7 +55,7 @@ export function CopyLinkButton({ slug }: CopyLinkButtonProps) {
           showToast ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
-        <div className="mb-6 px-4 py-2 bg-zinc-800 text-gray-200 rounded-lg shadow-lg">
+        <div className="mb-6 px-4 py-2 bg-zinc-800 text-gray-200 rounded-lg">
           Link copied to clipboard!
         </div>
       </div>

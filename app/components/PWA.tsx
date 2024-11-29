@@ -46,27 +46,27 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
       {children}
       {showPrompt && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <div className="relative w-full max-w-sm bg-zinc-900 rounded-2xl shadow-2xl">
-            <div className="relative h-40 bg-gradient-to-br from-blue-500 to-purple-600">
+          <div className="relative w-full max-w-sm bg-zinc-900 rounded-xl">
+            <div className="relative h-40 bg-gradient-to-br from-blue-500 to-purple-600 rounded-t-xl">
               <Image
                 src="https://placehold.co/192x192/000000/FFFFFF/png?text=B"
                 alt="App Icon"
                 width={80}
                 height={80}
-                className="absolute -bottom-10 left-6 rounded-2xl shadow-xl"
+                className="absolute -bottom-10 left-6 rounded-2xl"
               />
-              <button onClick={() => setShowPrompt(false)} className="absolute top-4 right-4 p-2 rounded-full bg-black/20 text-white/80 hover:bg-black/30">
+              <button onClick={() => setShowPrompt(false)} className="absolute top-4 right-4 p-2 rounded-full bg-black/20 text-white/80 hover:bg-black/30 transition duration-500 hover:scale-125">
                 <FiX size={16} />
               </button>
             </div>
             <div className="p-6 pt-14">
-              <h3 className="text-lg font-semibold mb-2">Install iambhvsh</h3>
+              <h3 className="text-xl text-white font-bold mb-2">Bhavesh Patil</h3>
               <p className="text-sm text-gray-400 mb-6">Install this application for a better experience</p>
               <div className="flex gap-3">
-                <button onClick={() => setShowPrompt(false)} className="flex-1 px-4 py-2.5 text-sm rounded-lg bg-zinc-800 text-gray-300 hover:bg-zinc-700">
+                <button onClick={() => setShowPrompt(false)} className="flex-1 px-4 py-2.5 text-sm rounded-full bg-zinc-800 text-gray-300 hover:bg-zinc-700 transition-all duration-500 hover:scale-110">
                   Not Now
                 </button>
-                <button onClick={handleInstall} className="flex-1 px-4 py-2.5 text-sm rounded-lg bg-blue-500 text-white hover:bg-blue-600 font-medium">
+                <button onClick={handleInstall} className="flex-1 px-4 py-2.5 text-sm rounded-full bg-blue-500 text-white hover:bg-blue-600 font-medium transition duration-500 hover:scale-110">
                   Install App
                 </button>
               </div>

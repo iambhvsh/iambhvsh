@@ -9,9 +9,9 @@ export default async function Blog() {
   const posts = await getAllPosts()
 
   return (
-    <div className="max-w-3xl mx-auto px-4 pt-24 pb-12">
+    <div className="max-w-3xl mx-auto sm-px-16 px-4 pt-32 py-12">
       <div className="mb-16">
-        <h1 className="text-3xl font-bold mb-3">Blog</h1>
+        <h1 className="text-4xl text-white font-bold mb-3">Blog</h1>
         <p className="text-gray-400 text-lg">
           Thoughts and insights about web development.
         </p>
@@ -43,7 +43,7 @@ export default async function Blog() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold group-hover:text-blue-400 transition-colors mb-3">
+                  <h2 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors mb-3">
                     {post.title}
                   </h2>
                   <p className="text-gray-400 line-clamp-2">{post.excerpt}</p>

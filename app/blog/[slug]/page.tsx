@@ -6,6 +6,7 @@ import VerifiedBadge from '../../components/VerifiedBadge'
 import { Metadata } from 'next'
 import { getAllPosts } from '../../../lib/blog'
 import { CopyLinkButton } from '../../components/CopyLinkButton'
+import { notFound } from 'next/navigation'
 
 // Using Next.js built-in types
 type PageProps = {
@@ -18,6 +19,11 @@ export async function generateMetadata(
   { params }: PageProps
 ): Promise<Metadata> {
   const post = await getPostBySlug(params.slug)
+  
+  // Return 404 if post doesn't exist
+  if (!post) {
+    notFound()
+  }
   
   // Generate a more descriptive meta description
   const description = post.excerpt 
@@ -53,6 +59,11 @@ export async function generateMetadata(
 export default async function Page({ params }: PageProps) {
   const post = await getPostBySlug(params.slug)
 
+  // Return 404 if post doesn't exist
+  if (!post) {
+    notFound()
+  }
+
   return (
     <div className="max-w-3xl mx-auto px-4 pt-24 pb-12">
       {post.coverImage && (
@@ -69,7 +80,7 @@ export default async function Page({ params }: PageProps) {
       )}
 
       <article>
-        <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
+        <h1 className="text-3xl text-white font-bold mb-4">{post.title}</h1>
         
         <p className="text-gray-400 text-lg mb-8">{post.excerpt}</p>
 
@@ -86,7 +97,7 @@ export default async function Page({ params }: PageProps) {
               <VerifiedBadge className="absolute -right-1 -bottom-1 w-6 h-6" />
             </div>
             <div>
-              <div className="font-medium">{AUTHOR.name}</div>
+              <div className="font-medium text-white">{AUTHOR.name}</div>
               <div className="flex items-center gap-2 text-sm text-gray-400">
                 <span>{formatDate(post.date)}</span>
                 <span>·</span>

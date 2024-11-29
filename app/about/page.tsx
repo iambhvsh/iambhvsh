@@ -32,12 +32,12 @@ export default function About() {
             alt={AUTHOR.name}
             width={150}
             height={150}
-            className="rounded-2xl shadow-2xl"
+            className="rounded-2xl"
             priority
           />
         </div>
         <div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">{AUTHOR.name}</h1>
+          <h1 className="text-3xl text-white md:text-4xl font-bold mb-4">{AUTHOR.name}</h1>
           <p className="text-xl text-gray-400 mb-4">Frontend Developer</p>
           <div className="flex items-center gap-2 text-gray-400">
             <FiMapPin className="w-4 h-4" />
@@ -74,7 +74,7 @@ export default function About() {
       </div>
 
       <div className="space-y-6 mb-16">
-        <h2 className="text-2xl font-bold">About Me</h2>
+        <h2 className="text-2xl text-white font-bold">About Me</h2>
         <p className="text-lg text-gray-300">
           I&apos;ve worked as a passionate Frontend Developer focused on creating clean, efficient, and user-friendly web applications. 
           My journey in web development started with curiosity and has evolved into a deep love for crafting beautiful user interfaces.
@@ -86,7 +86,7 @@ export default function About() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-2xl font-bold mb-8">Skills & Technologies</h2>
+        <h2 className="text-2xl text-white font-bold mb-8">Skills & Technologies</h2>
         <div className="space-y-8">
           <div>
             <h3 className="text-lg font-semibold text-gray-300 mb-4">Frontend Development</h3>

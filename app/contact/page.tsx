@@ -8,7 +8,7 @@ const socialLinks = [
     url: 'https://github.com/iambhvsh',
     icon: FaGithub,
     username: '@iambhvsh',
-    color: 'hover:text-[#333] dark:hover:text-white'
+    color: 'hover:text-white'
   },
   {
     name: 'LinkedIn',
@@ -32,8 +32,8 @@ export default function Contact() {
       <div className="space-y-16">
         {/* Header Section */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">Let&apos;s Connect</h1>
-          <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl">
+          <h1 className="text-4xl text-white md:text-5xl font-bold">Let&apos;s Connect</h1>
+          <p className="text-lg text-gray-400 max-w-2xl">
             Whether you have a project in mind, want to collaborate, or just want to say hi, 
             I&apos;d love to hear from you. Choose your preferred way to connect:
           </p>
@@ -47,16 +47,16 @@ export default function Contact() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group flex items-center gap-6 p-8 rounded-2xl bg-zinc-950 dark:hover:bg-zinc-900 transition-all hover:shadow-xl`}
+              className={`group flex items-center gap-6 p-8 rounded-2xl text-white bg-zinc-950 hover:bg-zinc-900 transition-all`}
             >
-              <div className={`p-4 rounded-xl bg-zinc-800 ${link.color} transition-all duration-300 group-hover:scale-110 group-hover:shadow-md`}>
+              <div className={`p-4 rounded-xl bg-zinc-800 ${link.color} transition-all duration-300 group-hover:scale-110`}>
                 <link.icon className="w-7 h-7" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-xl group-hover:text-blue-500 transition-colors">
                   {link.name}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 truncate">
+                <div className="text-sm text-gray-400 truncate">
                   {link.username}
                 </div>
               </div>
@@ -65,16 +65,16 @@ export default function Contact() {
         </div>
 
         {/* Additional Info */}
-        <div className="grid gap-12 sm:grid-cols-2">
+        <div className="grid gap-12 sm:grid-cols-2 text-white">
           {/* Working Hours */}
           <div className="space-y-6">
             <div className="flex items-center gap-4 text-xl font-semibold">
-              <div className="p-3 rounded-xl bg-gray-50 dark:bg-gray-900/50">
+              <div className="p-3 rounded-xl bg-gray-900/50">
                 <FiClock className="w-6 h-6" />
               </div>
               <h2>Working Hours</h2>
             </div>
-            <p className="text-gray-500 dark:text-gray-400 pl-16 text-lg">
+            <p className="text-gray-400 pl-16 text-lg">
               Monday — Friday<br />
               9:00 AM — 6:00 PM (IST)
             </p>
@@ -83,12 +83,12 @@ export default function Contact() {
           {/* Location */}
           <div className="space-y-6">
             <div className="flex items-center gap-4 text-xl font-semibold">
-              <div className="p-3 rounded-xl bg-gray-50 dark:bg-gray-900/50">
+              <div className="p-3 rounded-xl bg-gray-900/50">
                 <FiMapPin className="w-6 h-6" />
               </div>
               <h2>Location</h2>
             </div>
-            <p className="text-gray-500 dark:text-gray-400 pl-16 text-lg">
+            <p className="text-gray-400 pl-16 text-lg">
               Chattrapati Sambhajinagar, India<br />
               Available for remote work
             </p>

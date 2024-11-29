@@ -65,7 +65,7 @@ export default function Search() {
   return (
     <div className="max-w-3xl mx-auto px-4 pt-24 pb-12">
       <div className="mb-12">
-        <h1 className="text-4xl font-bold mb-3">Search</h1>
+        <h1 className="text-4xl text-white font-bold my-8">Search</h1>
         <div className="relative">
           <input
             type="text"
@@ -112,7 +112,7 @@ export default function Search() {
                     {result.type === 'blog' ? 'Post' : result.type}
                   </span>
                 </div>
-                <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                <h3 className="text-lg text-white font-medium group-hover:text-blue-400 transition-colors">
                   {result.title}
                 </h3>
                 {result.description && (

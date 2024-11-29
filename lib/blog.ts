@@ -18,6 +18,11 @@ export type BlogPost = {
   coverImage?: string
 }
 
+function formatReadingTime(readingTimeText: string) {
+  const minutes = parseInt(readingTimeText.split(' ')[0])
+  return `${minutes}m read`
+}
+
 export async function getAllPosts(): Promise<BlogPost[]> {
   if (!fs.existsSync(postsDirectory)) return []
 
@@ -37,7 +42,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         date: data.date,
         excerpt: data.excerpt || '',
         content: serializedContent,
-        readingTime: readingTime(content).text,
+        readingTime: formatReadingTime(readingTime(content).text),
         tags: data.tags || [],
         coverImage: data.coverImage || undefined
       }
@@ -47,25 +52,34 @@ export async function getAllPosts(): Promise<BlogPost[]> {
   return posts
 }
 
-export async function getPostBySlug(slug: string): Promise<BlogPost> {
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fullPath = path.join(process.cwd(), 'app/blog/posts', `${slug}.mdx`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
   
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      development: process.env.NODE_ENV === 'development',
+  try {
+    if (!fs.existsSync(fullPath)) {
+      return null;
     }
-  })
+    
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const { data, content } = matter(fileContents)
+    
+    const mdxSource = await serialize(content, {
+      mdxOptions: {
+        development: process.env.NODE_ENV === 'development',
+      }
+    })
 
-  return {
-    slug,
-    content: mdxSource,
-    title: data.title,
-    date: data.date,
-    excerpt: data.excerpt || '',
-    readingTime: readingTime(content).text,
-    tags: data.tags || [],
-    coverImage: data.coverImage || undefined
+    return {
+      slug,
+      content: mdxSource,
+      title: data.title,
+      date: data.date,
+      excerpt: data.excerpt || '',
+      readingTime: formatReadingTime(readingTime(content).text),
+      tags: data.tags || [],
+      coverImage: data.coverImage || undefined
+    }
+  } catch (error) {
+    return null;
   }
 } 
