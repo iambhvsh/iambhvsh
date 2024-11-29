@@ -15,7 +15,7 @@
     "prod:clean": "pnpm clean && pnpm prod"
   },
   "dependencies": {
-    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.5.7",
     "framer-motion": "^11.12.0",
