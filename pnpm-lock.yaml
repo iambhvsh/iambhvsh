@@ -12,11 +12,11 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0(webpack@5.96.1)
       '@mdx-js/react':
-        specifier: ^2.3.0
-        version: 2.3.0(react@18.3.1)
+        specifier: ^3.0.0
+        version: 3.1.0(@types/react@18.3.14)(react@18.3.1)
       '@next/mdx':
         specifier: ^13.5.7
-        version: 13.5.7(@mdx-js/loader@2.3.0(webpack@5.96.1))(@mdx-js/react@2.3.0(react@18.3.1))
+        version: 13.5.7(@mdx-js/loader@2.3.0(webpack@5.96.1))(@mdx-js/react@3.1.0(@types/react@18.3.14)(react@18.3.1))
       framer-motion:
         specifier: ^11.12.0
         version: 11.12.0(react-dom@18.2.0(react@18.3.1))(react@18.3.1)
@@ -508,6 +508,12 @@ packages:
   '@mdx-js/react@2.3.0':
     resolution: {integrity: sha512-zQH//gdOmuu7nt2oJR29vFhDv88oGPmVw6BggmrHeMI+xgEkp1B2dX9/bMBSYtK0dyLX/aOmesKS09g222K1/g==}
     peerDependencies:
+      react: '>=16'
+
+  '@mdx-js/react@3.1.0':
+    resolution: {integrity: sha512-QjHtSaoameoalGnKDT3FoIl4+9RwyTmo9ZJGBdLOks/YOiWHoRDI3PUwEzOE7kEmGcV3AFcp9K6dYu9rEuKLAQ==}
+    peerDependencies:
+      '@types/react': '>=16'
       react: '>=16'
 
   '@next/env@13.5.7':
@@ -2701,14 +2707,20 @@ snapshots:
       '@types/react': 18.3.14
       react: 18.3.1
 
+  '@mdx-js/react@3.1.0(@types/react@18.3.14)(react@18.3.1)':
+    dependencies:
+      '@types/mdx': 2.0.13
+      '@types/react': 18.3.14
+      react: 18.3.1
+
   '@next/env@13.5.7': {}
 
-  '@next/mdx@13.5.7(@mdx-js/loader@2.3.0(webpack@5.96.1))(@mdx-js/react@2.3.0(react@18.3.1))':
+  '@next/mdx@13.5.7(@mdx-js/loader@2.3.0(webpack@5.96.1))(@mdx-js/react@3.1.0(@types/react@18.3.14)(react@18.3.1))':
     dependencies:
       source-map: 0.7.4
     optionalDependencies:
       '@mdx-js/loader': 2.3.0(webpack@5.96.1)
-      '@mdx-js/react': 2.3.0(react@18.3.1)
+      '@mdx-js/react': 3.1.0(@types/react@18.3.14)(react@18.3.1)
 
   '@next/swc-darwin-arm64@13.5.7':
     optional: true
