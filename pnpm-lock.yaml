@@ -19,25 +19,25 @@ importers:
         version: 13.5.7(@mdx-js/loader@2.3.0(webpack@5.96.1))(@mdx-js/react@2.3.0(react@18.3.1))
       framer-motion:
         specifier: ^11.12.0
-        version: 11.12.0(react-dom@18.2.0(react@18.3.1))(react@18.3.1)
+        version: 11.12.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
       next:
         specifier: 13.5.7
-        version: 13.5.7(react-dom@18.2.0(react@18.3.1))(react@18.3.1)
+        version: 13.5.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-mdx-remote:
         specifier: ^4.4.1
-        version: 4.4.1(react-dom@18.2.0(react@18.3.1))(react@18.3.1)
+        version: 4.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-sitemap:
         specifier: ^4.2.3
-        version: 4.2.3(next@13.5.7(react-dom@18.2.0(react@18.3.1))(react@18.3.1))
+        version: 4.2.3(next@13.5.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       react:
         specifier: 18.3.1
         version: 18.3.1
       react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.3.1)
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
       react-icons:
         specifier: ^5.3.0
         version: 5.3.0(react@18.3.1)
@@ -82,8 +82,8 @@ importers:
         specifier: 18.3.14
         version: 18.3.14
       '@types/react-dom':
-        specifier: 18.2.4
-        version: 18.2.4
+        specifier: 18.3.2
+        version: 18.3.2
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -663,8 +663,8 @@ packages:
   '@types/prop-types@15.7.13':
     resolution: {integrity: sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==}
 
-  '@types/react-dom@18.2.4':
-    resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
+  '@types/react-dom@18.3.2':
+    resolution: {integrity: sha512-Fqp+rcvem9wEnGr3RY8dYNvSQ8PoLqjZ9HLgaPUOjJJD120uDyOxOjc/39M4Kddp9JQCxpGQbnhVQF0C0ncYVg==}
 
   '@types/react@18.3.14':
     resolution: {integrity: sha512-NzahNKvjNhVjuPBQ+2G7WlxstQ+47kXZNHlUvFakDViuIEfGY926GqhMueQFZ7woG+sPiQKlF36XfrIUVSUfFg==}
@@ -1886,10 +1886,10 @@ packages:
   randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
 
-  react-dom@18.2.0:
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+  react-dom@18.3.1:
+    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
-      react: ^18.2.0
+      react: ^18.3.1
 
   react-icons@5.3.0:
     resolution: {integrity: sha512-DnUk8aFbTyQPSkCfF8dbX6kQjXA9DktMeJqfjrg6cK9vwQVMxmcA3BfP4QoiztVmEHtwlTgLFsPuH2NskKT6eg==}
@@ -2839,7 +2839,7 @@ snapshots:
 
   '@types/prop-types@15.7.13': {}
 
-  '@types/react-dom@18.2.4':
+  '@types/react-dom@18.3.2':
     dependencies:
       '@types/react': 18.3.14
 
@@ -3219,12 +3219,12 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.12.0(react-dom@18.2.0(react@18.3.1))(react@18.3.1):
+  framer-motion@11.12.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       tslib: 2.8.1
     optionalDependencies:
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
 
   fsevents@2.3.3:
     optional: true
@@ -4146,26 +4146,26 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-mdx-remote@4.4.1(react-dom@18.2.0(react@18.3.1))(react@18.3.1):
+  next-mdx-remote@4.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@mdx-js/mdx': 2.3.0
       '@mdx-js/react': 2.3.0(react@18.3.1)
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
       vfile: 5.3.7
       vfile-matter: 3.0.1
     transitivePeerDependencies:
       - supports-color
 
-  next-sitemap@4.2.3(next@13.5.7(react-dom@18.2.0(react@18.3.1))(react@18.3.1)):
+  next-sitemap@4.2.3(next@13.5.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
     dependencies:
       '@corex/deepmerge': 4.0.43
       '@next/env': 13.5.7
       fast-glob: 3.3.2
       minimist: 1.2.8
-      next: 13.5.7(react-dom@18.2.0(react@18.3.1))(react@18.3.1)
+      next: 13.5.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  next@13.5.7(react-dom@18.2.0(react@18.3.1))(react@18.3.1):
+  next@13.5.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@next/env': 13.5.7
       '@swc/helpers': 0.5.2
@@ -4173,7 +4173,7 @@ snapshots:
       caniuse-lite: 1.0.30001684
       postcss: 8.4.31
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
       styled-jsx: 5.1.1(react@18.3.1)
       watchpack: 2.4.0
     optionalDependencies:
@@ -4520,7 +4520,7 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  react-dom@18.2.0(react@18.3.1):
+  react-dom@18.3.1(react@18.3.1):
     dependencies:
       loose-envify: 1.4.0
       react: 18.3.1
