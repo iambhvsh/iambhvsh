@@ -169,7 +169,6 @@ html {
   }
 }
 
-/* Remove scrollbar but maintain functionality */
 pre::-webkit-scrollbar {
   display: none;
 }
@@ -179,7 +178,6 @@ pre {
   scrollbar-width: none;
 }
 
-/* Form elements */
 input[type='text'],
 input[type='email'] {
   -webkit-appearance: none;
@@ -187,7 +185,6 @@ input[type='email'] {
   appearance: none;
 }
 
-/* Table overflow handling */
 table {
   display: block;
   max-width: fit-content;
@@ -199,7 +196,6 @@ table {
   text-wrap: balance;
 }
 
-/* Code blocks */
 [data-rehype-pretty-code-fragment] {
   @apply relative;
 }
@@ -241,7 +237,6 @@ table {
   @apply mt-0;
 }
 
-/* Add these rules to reset code block styles */
 pre, code {
   all: unset;
   font-family: 'Fira Code', monospace !important;
@@ -259,7 +254,6 @@ code {
   word-wrap: normal;
 }
 
-/* Add these styles */
 code {
   font-family: 'Fira Code', monospace;
 }
@@ -277,14 +271,12 @@ code {
   border-radius: 2px;
 }
 
-/* Remove the existing syntax highlighting reset if present */
 [class*="language-"],
 pre[class*="language-"],
 code[class*="language-"] {
   font-family: 'Fira Code', monospace !important;
 }
 
-/* Add these to your existing styles */
 .font-noto-jp {
   font-family: var(--font-noto-jp);
 }
