@@ -1,4 +1,4 @@
-# 🚀 Personal Portfolio Website
+# Bhavesh Patil - Portfolio
 
 ## Overview
 
@@ -102,5 +102,6 @@ Feel free to reach out!
 
 This project is open source and available under the [MIT License](LICENSE).
 
-> "The best way to learn is to build"
-> — Every Developer Ever
+<br>
+
+> "Design is not just what it looks like and feels like. Design is how it works" - Steve Jobs
