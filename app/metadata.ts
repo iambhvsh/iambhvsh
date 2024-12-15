@@ -28,7 +28,7 @@ export function generateMetadata({ params }: MetadataProps): Metadata {
     },
     description,
     keywords: tags,
-    author: 'Bhavesh Patil',
+    authors: [{ name: 'Bhavesh Patil' }],
     viewport: 'width=device-width, initial-scale=1.0',
     themeColor: '#000000',
     openGraph: {
