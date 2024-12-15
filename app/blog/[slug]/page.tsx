@@ -8,14 +8,14 @@ import { CopyLinkButton } from '../../components/CopyLinkButton'
 import { notFound } from 'next/navigation'
 
 interface Post {
-  title: string
-  excerpt: string
-  tags?: string[]
-  slug: string
-  coverImage?: string
-  date: string
-  readingTime: string
-  content: string
+  title: string;
+  excerpt: string;
+  tags?: string[];
+  slug: string;
+  coverImage?: string;
+  date: string;
+  readingTime: string;
+  content: MDXRemoteSerializeResult;
 }
 
 type PageProps = {
@@ -25,9 +25,9 @@ type PageProps = {
 }
 
 async function fetchPostOr404(slug: string): Promise<Post> {
-  const post = await getPostBySlug(slug)
-  if (!post) notFound()
-  return post
+  const post = await getPostBySlug(slug) as Post;
+  if (!post) notFound();
+  return post;
 }
 
 function constructMetadata(post: Post) {
