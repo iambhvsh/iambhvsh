@@ -12,8 +12,7 @@ type MetadataProps = {
 
 export function generateMetadata({ params }: MetadataProps): Metadata {
   const title = params.title || 'Bhavesh Patil'
-  const description =
-    params.description || 'Frontend Developer focused on building innovative and modern web applications.'
+  const description = params.description || 'Frontend Developer focused on building innovative and modern web applications.'
   const type = params.type || 'website'
   const slug = params.slug || ''
   const tags = params.tags?.join(', ') || 'web development, Bhavesh Patil, portfolio'
@@ -40,9 +39,7 @@ export function generateMetadata({ params }: MetadataProps): Metadata {
       type,
       images: [
         {
-          url: `https://placehold.co/1200x630/000000/FFFFFF/png?text=${encodeURIComponent(
-            title.charAt(0)
-          )}&font=montserrat`,
+          url: `https://placehold.co/1200x630/000000/FFFFFF/png?text=${encodeURIComponent(title.charAt(0))}&font=montserrat`,
           alt: `Placeholder image for ${title}`,
           width: 1200,
           height: 630,
@@ -54,9 +51,7 @@ export function generateMetadata({ params }: MetadataProps): Metadata {
       title,
       description,
       images: [
-        `https://placehold.co/1200x630/000000/FFFFFF/png?text=${encodeURIComponent(
-          title.charAt(0)
-        )}&font=montserrat`,
+        `https://placehold.co/1200x630/000000/FFFFFF/png?text=${encodeURIComponent(title.charAt(0))}&font=montserrat`,
       ],
     },
     robots: {
