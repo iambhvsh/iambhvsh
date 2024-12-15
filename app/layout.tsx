@@ -21,6 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF/png?text=B&font=montserrat" type="image/png" />
         <link rel="apple-touch-icon" href="https://placehold.co/180x180/000000/FFFFFF/png?text=B&font=montserrat" />
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
