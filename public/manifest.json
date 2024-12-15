@@ -3,7 +3,7 @@
   "short_name": "iambhvsh",
   "description": "Discover Bhavesh Patil's cutting-edge web development portfolio, tools, and blog with a sleek, AMOLED-optimized design.",
   "start_url": "/?utm_source=pwa",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#000000",
   "theme_color": "#000000",
   "orientation": "portrait",
