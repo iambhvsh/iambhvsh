@@ -7,19 +7,30 @@ import { Metadata } from 'next'
 import { CopyLinkButton } from '../../components/CopyLinkButton'
 import { notFound } from 'next/navigation'
 
+interface Post {
+  title: string
+  excerpt: string
+  tags?: string[]
+  slug: string
+  coverImage?: string
+  date: string
+  readingTime: string
+  content: string
+}
+
 type PageProps = {
   params: {
     slug: string
   }
 }
 
-async function fetchPostOr404(slug: string) {
+async function fetchPostOr404(slug: string): Promise<Post> {
   const post = await getPostBySlug(slug)
   if (!post) notFound()
   return post
 }
 
-function constructMetadata(post) {
+function constructMetadata(post: Post) {
   const description = post.excerpt
     ? `${post.excerpt} | Read this article by Bhavesh Patil about ${post.tags?.join(', ') || 'web development'}.`
     : `Read ${post.title} - An article by Bhavesh Patil about ${post.tags?.join(', ') || 'web development'}.`
