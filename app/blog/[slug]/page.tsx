@@ -1,11 +1,12 @@
-import { getPostBySlug, getAllPosts } from '../../../lib/blog'
-import MDXContent from '../../components/MDXContent'
-import Image from 'next/image'
-import { AUTHOR, formatDate } from '../../../lib/shared'
-import VerifiedBadge from '../../components/VerifiedBadge'
-import { Metadata } from 'next'
-import { CopyLinkButton } from '../../components/CopyLinkButton'
-import { notFound } from 'next/navigation'
+import { getPostBySlug, getAllPosts } from '../../../lib/blog';
+import MDXContent from '../../components/MDXContent';
+import Image from 'next/image';
+import { AUTHOR, formatDate } from '../../../lib/shared';
+import VerifiedBadge from '../../components/VerifiedBadge';
+import { Metadata } from 'next';
+import { CopyLinkButton } from '../../components/CopyLinkButton';
+import { notFound } from 'next/navigation';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 interface Post {
   title: string;
@@ -20,9 +21,9 @@ interface Post {
 
 type PageProps = {
   params: {
-    slug: string
-  }
-}
+    slug: string;
+  };
+};
 
 async function fetchPostOr404(slug: string): Promise<Post> {
   const post = await getPostBySlug(slug) as Post;
@@ -33,9 +34,9 @@ async function fetchPostOr404(slug: string): Promise<Post> {
 function constructMetadata(post: Post) {
   const description = post.excerpt
     ? `${post.excerpt} | Read this article by Bhavesh Patil about ${post.tags?.join(', ') || 'web development'}.`
-    : `Read ${post.title} - An article by Bhavesh Patil about ${post.tags?.join(', ') || 'web development'}.`
+    : `Read ${post.title} - An article by Bhavesh Patil about ${post.tags?.join(', ') || 'web development'}.`;
 
-  const ogImageUrl = `https://placehold.co/1200x630/png?text=${encodeURIComponent(post.title)}&fontsize=48&color=FFFFFF&bgcolor=000000`
+  const ogImageUrl = `https://placehold.co/1200x630/png?text=${encodeURIComponent(post.title)}&fontsize=48&color=FFFFFF&bgcolor=000000`;
 
   return {
     title: post.title,
@@ -62,16 +63,16 @@ function constructMetadata(post: Post) {
       description,
       images: [ogImageUrl],
     },
-  }
+  };
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = await fetchPostOr404(params.slug)
-  return constructMetadata(post)
+  const post = await fetchPostOr404(params.slug);
+  return constructMetadata(post);
 }
 
 export default async function Page({ params }: PageProps) {
-  const post = await fetchPostOr404(params.slug)
+  const post = await fetchPostOr404(params.slug);
 
   return (
     <div className="max-w-3xl mx-auto px-4 pt-24 pb-12">
@@ -133,12 +134,12 @@ export default async function Page({ params }: PageProps) {
         </div>
       </article>
     </div>
-  )
+  );
 }
 
 export async function generateStaticParams() {
-  const posts = await getAllPosts()
+  const posts = await getAllPosts();
   return posts.map((post) => ({
     slug: post.slug,
-  }))
+  }));
 }
