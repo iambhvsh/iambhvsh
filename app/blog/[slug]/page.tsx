@@ -28,7 +28,7 @@ export async function generateMetadata(
   // Generate a more descriptive meta description
   const description = post.excerpt 
     ? `${post.excerpt} | Read this article by Bhavesh Patil about ${post.tags?.join(', ') || 'web development'}.`
-    : `Read ${post.title} - An article by Bhavesh Patil about ${post.tags?.join(', ') || 'web development'}.`;
+    : `Read ${post.title} - An article by Bhavesh Patil about ${post.tags?.join(', ') || 'web development'}.`
 
   return {
     title: post.title,
@@ -137,4 +137,4 @@ export async function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug,
   }))
-} 
+}
