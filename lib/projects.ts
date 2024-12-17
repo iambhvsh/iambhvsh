@@ -13,6 +13,16 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    title: 'Flashified',
+    description: 'Flashified is a powerful and user-friendly tool for downloading images from websites effortlessly. Whether it\’s blogs, galleries, or dynamic content, Flashified simplifies the process of extracting high-quality images.',
+    image: 'https://placehold.co/1200x630/1a1a1a/FFFFFF/png?text=Flashified',
+    tags: ['NextJS', 'TailwindCSS'],
+    links: {
+      github: 'https://github.com/iambhvsh/flashified',
+      live: 'https://flashified.vercel.app'
+    }
+  },
+  {
     title: 'The Pixel Store',
     description: 'An App Store inspired by Apple\'s design, built with React and Framework7. Features a clean, modern interface with smooth animations.',
     image: 'https://placehold.co/1200x630/1a1a1a/FFFFFF/png?text=Pixel+Store',
