@@ -38,7 +38,7 @@ A modern, responsive personal portfolio website built with cutting-edge web tech
 
 ### Prerequisites
 - Node.js (v18 or later)
-- npm or yarn
+- pnpm
 
 ### Installation
 
