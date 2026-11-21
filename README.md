@@ -1,58 +1,124 @@
+<div align="center">
+
+<img src="https://images.weserv.nl/?url=github.com/iambhvsh.png&w=320&h=320&fit=cover&mask=circle&maxage=1d" width="140" alt="Bhavesh Patil">
+
 # Bhavesh Patil
 
-### Software, designed with intention.
+Web and Android developer<br>
+Information Technology student, Chhatrapati Sambhajinagar, India
 
-Building modern web experiences, automation workflows, and thoughtful digital products.
+<a href="https://iambhvsh.in"><img src="assets/chip-website.svg" height="36" alt="Website"></a>
+<a href="https://work.iambhvsh.in"><img src="assets/chip-work.svg" height="36" alt="Work"></a>
+<a href="https://writings.iambhvsh.in"><img src="assets/chip-writing.svg" height="36" alt="Writing"></a>
+<a href="https://links.iambhvsh.in"><img src="assets/chip-links.svg" height="36" alt="Links"></a>
+<a href="https://www.buymeacoffee.com/iambhvsh"><img src="assets/chip-coffee.svg" height="36" alt="Buy me a coffee"></a>
 
-[GitHub](https://github.com/iambhvsh) · [Instagram](https://instagram.com/iambhvsh) · [Portfolio](https://iambhvsh.in)
+
+<br>
 
 ## About
 
-I'm a student developer from Chatrapati Sambhajinagar, India, currently pursuing a degree in Information Technology.
+I build websites with Svelte and SvelteKit, React, Next.js, TypeScript and Tailwind CSS,<br>
+and Android apps with Kotlin and Jetpack Compose.<br>
+On the backend I work with Node.js and Python, and I'm currently learning Swift.
 
-My work revolves around building clean, modern, and functional experiences across the web, from frontend interfaces to backend systems and automation workflows.
+I care about interfaces that are fast, clear and respectful of privacy.<br>
+Most of what I build works without accounts or tracking.
 
-I enjoy creating products that feel simple, fast, and intentional.
+<br>
 
-Recently, I've been exploring deeper workflows in Python, modern web architecture, and intelligent systems while continuing to refine my approach to design and development.
+## GitHub
 
-## Selected Work
+<a href="https://github.com/iambhvsh?tab=followers"><img src="https://img.shields.io/github/followers/iambhvsh?style=flat&label=followers&labelColor=6750A4&color=E8DEF8&logo=github&logoColor=white" alt="Followers"></a>
+<a href="https://github.com/iambhvsh?tab=repositories&sort=stargazers"><img src="https://img.shields.io/github/stars/iambhvsh?style=flat&label=total%20stars&labelColor=6750A4&color=E8DEF8&logo=github&logoColor=white" alt="Total stars received"></a>
+<a href="https://github.com/iambhvsh?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fiambhvsh&query=%24.public_repos&label=repositories&style=flat&labelColor=6750A4&color=E8DEF8" alt="Repositories"></a>
 
-### AeroX
+<br>
 
-A modern aviation-focused platform designed with clarity and minimal presentation in mind. Built using React, Next.js, and Tailwind CSS.
+<img src="https://ghchart.rshah.org/6750A4/iambhvsh" width="720" alt="GitHub contribution graph">
 
-### YTDL
+<br>
 
-A lightweight and privacy-focused command line utility for reliable media downloads. Focused on speed, simplicity, and developer experience.
+<a href="https://github.com/iambhvsh?achievement=starstruck&tab=achievements"><img src="https://github.githubassets.com/assets/starstruck-default--light-a594e2a027e0.png" height="84" alt="Starstruck"></a>
+<a href="https://github.com/iambhvsh?achievement=pull-shark&tab=achievements"><img src="https://github.githubassets.com/assets/pull-shark-bronze-a37accb528d1.png" height="84" alt="Pull Shark x2"></a>
+<a href="https://github.com/iambhvsh?achievement=pair-extraordinaire&tab=achievements"><img src="https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png" height="84" alt="Pair Extraordinaire"></a>
+<a href="https://github.com/iambhvsh?achievement=yolo&tab=achievements"><img src="https://github.githubassets.com/assets/yolo-default-be0bbff04951.png" height="84" alt="YOLO"></a>
 
-### blkproxy
+Starstruck · Pull Shark ×2 · Pair Extraordinaire · YOLO
 
-A zero-configuration proxy utility built for modern applications and API workflows. Designed to stay lightweight and effortless to use.
+<br>
 
-### Flashified
+## Web projects
 
-A utility-focused project for handling and downloading image collections efficiently. Built with simplicity and workflow in mind.
+**[Tide](https://tide.iambhvsh.in)**<br>
+A calm, text-first social network built mobile-first, with Svelte.
 
-## Toolkit
+**[Writing](https://writings.iambhvsh.in)**<br>
+My writing on design, code and craft. Built with SvelteKit, with search, RSS and generated social images.
 
-<img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,tailwind,nodejs,python,firebase,git,linux" />
+**[ytdl](https://github.com/iambhvsh/ytdl)**<br>
+A privacy-first YouTube downloader for the command line, built on yt-dlp.<br>
+Everything is processed on your device, and it runs on Windows, macOS, Linux and Termux.
 
-## Current Focus
+**[Atlas](https://github.com/iambhvsh/atlas)**<br>
+A stateless, privacy-focused search engine API written in Python.
 
-- Building polished web experiences
-- Exploring advanced Python workflows
-- Learning more about intelligent systems and automation
-- Interested in Apple platform development and thoughtful product design
+**[Walleee](https://github.com/iambhvsh/walleee)**<br>
+A curated wallpaper app featuring work from artists and designers around the world.
 
-## Beyond Development
+<br>
 
-Outside development, I'm deeply interested in aviation, music, visual storytelling, and digital aesthetics.
+## Android apps
 
-Music is usually where ideas become quieter, clearer, and easier to understand.
+**[Shelf](https://github.com/iambhvsh/shelf)**<br>
+A fast, offline-first bookmark manager with link previews, collections, tags, reminders and biometric lock.
 
-I also enjoy editing and creating visual experiences that feel minimal and intentional.
+**[Theia](https://github.com/iambhvsh/theia)**<br>
+A voice assistant that registers as the Android default assistant,<br>
+with on-device speech transcription and spoken replies.
 
----
+**[Outflow](https://github.com/iambhvsh/outflow)**<br>
+A minimalist personal finance tracker in Material 3 Expressive.<br>
+Fully offline, with a spending dashboard and no analytics.
 
-### Designed and developed with care.
+<br>
+
+## Tech stack
+
+<img src="assets/stack.svg" width="800" alt="Frontend: HTML, CSS, JavaScript, TypeScript, React, Next.js, Svelte, Tailwind CSS, GSAP. Backend: Node.js, Python, Firebase. Android: Kotlin, Jetpack Compose, Material 3, Android SDK. Tooling: Git, Linux, macOS, Vercel. Learning: Swift.">
+
+<br>
+
+## Devices
+
+**MacBook Air M5**<br>
+My main machine for writing code, building interfaces and running everything day to day.
+
+**Motorola Edge 50 Fusion**<br>
+My daily phone, and the Android device I carry while building and using my own apps.
+
+**CMF Buds 2 Plus by Nothing**<br>
+My earbuds for music, calls and focus while I work.
+
+<br>
+
+## Interests
+
+**Aviation**<br>
+A long-standing interest, from how aircraft work to how flight information is presented.
+
+**Music**<br>
+Where my ideas become quieter, clearer and easier to understand.
+
+**Digital aesthetics**<br>
+I pay close attention to typography, spacing and motion, and I like interfaces that feel minimal and intentional.
+
+<br>
+
+## Support
+
+If you enjoy my projects, you can support what I build with a coffee.
+
+<a href="https://www.buymeacoffee.com/iambhvsh"><img src="assets/chip-coffee.svg" height="36" alt="Buy me a coffee"></a>
+
+</div>
