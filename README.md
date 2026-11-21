@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://images.weserv.nl/?url=github.com/iambhvsh.png&w=320&h=320&fit=cover&mask=circle&maxage=1d" width="140" alt="Bhavesh Patil">
+<img src="https://images.weserv.nl/?url=github.com/iambhvsh.png&w=320&h=320&fit=cover&mask=circle&maxage=1d" width="130" alt="Bhavesh Patil">
 
 # Bhavesh Patil
 
@@ -12,7 +12,7 @@ Information Technology student, Chhatrapati Sambhajinagar, India
 <a href="https://writings.iambhvsh.in"><img src="assets/chip-writing.svg" height="36" alt="Writing"></a>
 <a href="https://links.iambhvsh.in"><img src="assets/chip-links.svg" height="36" alt="Links"></a>
 
-<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 36px !important; width: 160px !important;" ></a>
+<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important; width: 170px !important;" ></a>
 
 
 <br>
@@ -30,15 +30,16 @@ Most of what I build works without accounts or tracking.
 
 ## GitHub
 
+### Stats
 <a href="https://github.com/iambhvsh?tab=followers"><img src="https://img.shields.io/github/followers/iambhvsh?style=flat&label=followers&labelColor=6750A4&color=E8DEF8&logo=github&logoColor=white" alt="Followers"></a>
 <a href="https://github.com/iambhvsh?tab=repositories&sort=stargazers"><img src="https://img.shields.io/github/stars/iambhvsh?style=flat&label=total%20stars&labelColor=6750A4&color=E8DEF8&logo=github&logoColor=white" alt="Total stars received"></a>
 <a href="https://github.com/iambhvsh?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fiambhvsh&query=%24.public_repos&label=repositories&style=flat&labelColor=6750A4&color=E8DEF8" alt="Repositories"></a>
 
-<br>
+### Contribution Graph
 
 <img src="https://ghchart.rshah.org/6750A4/iambhvsh" width="720" alt="GitHub contribution graph">
 
-<br>
+### Achievements 
 
 <a href="https://github.com/iambhvsh?achievement=starstruck&tab=achievements"><img src="https://github.githubassets.com/assets/starstruck-default--light-a594e2a027e0.png" height="84" alt="Starstruck"></a>
 <a href="https://github.com/iambhvsh?achievement=pull-shark&tab=achievements"><img src="https://github.githubassets.com/assets/pull-shark-bronze-a37accb528d1.png" height="84" alt="Pull Shark x2"></a>
@@ -98,21 +99,8 @@ My main machine for writing code, building interfaces and running everything day
 **Motorola Edge 50 Fusion**<br>
 My daily phone, and the Android device I carry while building and using my own apps.
 
-**CMF Buds 2 Plus by Nothing**<br>
+**CMF Buds 2 Plus**<br>
 My earbuds for music, calls and focus while I work.
-
-<br>
-
-## Interests
-
-**Aviation**<br>
-A long-standing interest, from how aircraft work to how flight information is presented.
-
-**Music**<br>
-Where my ideas become quieter, clearer and easier to understand.
-
-**Digital aesthetics**<br>
-I pay close attention to typography, spacing and motion, and I like interfaces that feel minimal and intentional.
 
 <br>
 
@@ -120,6 +108,6 @@ I pay close attention to typography, spacing and motion, and I like interfaces t
 
 If you enjoy my projects, you can support what I build with a coffee.
 
-<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 36px !important; width: 160px !important;" ></a>
+<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important; width: 170px !important;" ></a>
 
 </div>
