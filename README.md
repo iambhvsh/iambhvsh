@@ -11,7 +11,8 @@ Information Technology student, Chhatrapati Sambhajinagar, India
 <a href="https://work.iambhvsh.in"><img src="assets/chip-work.svg" height="36" alt="Work"></a>
 <a href="https://writings.iambhvsh.in"><img src="assets/chip-writing.svg" height="36" alt="Writing"></a>
 <a href="https://links.iambhvsh.in"><img src="assets/chip-links.svg" height="36" alt="Links"></a>
-<a href="https://www.buymeacoffee.com/iambhvsh"><img src="assets/chip-coffee.svg" height="36" alt="Buy me a coffee"></a>
+
+<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 36px !important; width: 160px !important;" ></a>
 
 
 <br>
@@ -119,6 +120,6 @@ I pay close attention to typography, spacing and motion, and I like interfaces t
 
 If you enjoy my projects, you can support what I build with a coffee.
 
-<a href="https://www.buymeacoffee.com/iambhvsh"><img src="assets/chip-coffee.svg" height="36" alt="Buy me a coffee"></a>
+<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 36px !important; width: 160px !important;" ></a>
 
 </div>
