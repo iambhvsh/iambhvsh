@@ -12,7 +12,8 @@ Information Technology student, Chhatrapati Sambhajinagar, India
 <a href="https://writings.iambhvsh.in"><img src="assets/chip-writing.svg" height="36" alt="Writing"></a>
 <a href="https://links.iambhvsh.in"><img src="assets/chip-links.svg" height="36" alt="Links"></a>
 
-<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important; width: 170px !important;" ></a>
+<a href="https://github.com/sponsors/iambhvsh"><img src="assets/chip-sponsor.svg" height="40" alt="Sponsor iambhvsh on GitHub"></a>
+<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="40" style="height: 40px !important; width: 170px !important;" ></a>
 
 
 <br>
@@ -106,8 +107,9 @@ My earbuds for music, calls and focus while I work.
 
 ## Support
 
-If you enjoy my projects, you can support what I build with a coffee.
+If you enjoy my projects, you can support what I build with a coffee or through GitHub Sponsor.
 
-<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important; width: 170px !important;" ></a>
+<a href="https://github.com/sponsors/iambhvsh"><img src="assets/chip-sponsor.svg" height="40" alt="Sponsor iambhvsh on GitHub"></a>
+<a href="https://www.buymeacoffee.com/iambhvsh"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="40" style="height: 40px !important; width: 170px !important;" ></a>
 
 </div>
